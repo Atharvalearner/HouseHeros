@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Worker"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingRight="10dp">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/worker_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:menu="@menu/customer_home_menu">
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="160dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/worker_toolbar"
+        android:scaleType="fitXY"
+        android:layout_marginHorizontal="120dp"
+        app:srcCompat="@drawable/baseline_person_add_24"
+        />
+
+    <LinearLayout
+        android:id="@+id/lname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/profile_image">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="NAME :"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:paddingStart="18dp"
+            android:padding="5dp"
+            />
+
+            <EditText
+                android:id="@+id/worker_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:hint="Name"
+                android:textColorHint="@color/black"
+                android:padding="6dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/edit_text_bg"
+                android:textColor="@color/black"
+                tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loccupation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/lname">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Occupation :"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="start"
+            android:paddingStart="15dp"
+            />
+
+        <EditText
+            android:id="@+id/worker_occupation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:hint="Occupation"
+            android:textColorHint="@color/black"
+            android:padding="6dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lgender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/loccupation">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Gender :"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="start"
+            android:paddingStart="15dp"
+            />
+
+        <RadioGroup
+            android:id="@+id/worker_gender"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:gravity="start"
+                android:text="Male"
+                android:padding="3dp"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                tools:ignore="TouchTargetSizeCheck" />
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:gravity="start"
+                android:text="Female"
+                android:padding="3dp"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                tools:ignore="TouchTargetSizeCheck" />
+            <RadioButton
+                android:id="@+id/other"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:gravity="start"
+                android:text="Other"
+                android:padding="3dp"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/laddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/lgender">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Address :"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="start"
+            android:paddingStart="15dp"
+            />
+
+        <EditText
+            android:id="@+id/worker_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:hint="Address"
+            android:textColorHint="@color/black"
+            android:padding="6dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lcontact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/laddress">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Contact No. :  "
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="start"
+            android:paddingStart="15dp"
+            />
+
+        <EditText
+            android:id="@+id/worker_contactNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:hint="Contact Number"
+            android:textColorHint="@color/black"
+            android:padding="6dp"
+            android:background="@drawable/edit_text_bg"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/lcontact">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Email :"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="start"
+            android:paddingStart="15dp"
+            />
+
+        <EditText
+            android:id="@+id/worker_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:hint="Email"
+            android:textColorHint="@color/black"
+            android:padding="6dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lexperience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/lemail">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Work Experience : "
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="start"
+            android:paddingStart="15dp"
+            />
+
+        <EditText
+            android:id="@+id/worker_experience"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:hint="Experience"
+            android:textColorHint="@color/black"
+            android:padding="6dp"
+            android:background="@drawable/edit_text_bg"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lshopaddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/lexperience">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Office / Shop address :"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="start"
+            android:paddingStart="15dp"
+            />
+
+        <EditText
+            android:id="@+id/worker_shop_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:hint="Office/shop Address"
+            android:textColorHint="@color/black"
+            android:padding="6dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/edit_text_bg"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/laddimages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lshopaddress"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload your testimonals"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <ImageView
+            android:id="@+id/imgupload"
+            android:layout_width="170dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/baseline_upload_file_24" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/laddimages"
+        android:layout_marginHorizontal="115dp"
+        android:gravity="center_horizontal"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "423925072443",
+    "firebase_url": "https://househero-b61ee-default-rtdb.firebaseio.com",
+    "project_id": "househero-b61ee",
+    "storage_bucket": "househero-b61ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423925072443:android:71da79413ef7fe0aefd21e",
+        "android_client_info": {
+          "package_name": "com.example.constructionmodel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS7HzZTTfzAs8g2iTZRFKzJfTQGZjyRJo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

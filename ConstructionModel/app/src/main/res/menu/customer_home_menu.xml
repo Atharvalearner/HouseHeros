@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+<!--    <item-->
+<!--        android:id="@+id/first"-->
+<!--        android:title="Search"-->
+<!--        android:icon="@drawable/baseline_search_24"-->
+<!--        app:showAsAction="ifRoom|withText"-->
+<!--        app:actionViewClass="android.widget.SearchView"/>-->
+<!--    <item-->
+<!--        android:id="@+id/second"-->
+<!--        android:title="Login"-->
+<!--        app:showAsAction="always"-->
+<!--        ></item>-->
+<!--    <item-->
+<!--        android:id="@+id/third"-->
+<!--        android:title="Settings"-->
+<!--        android:icon="@drawable/baseline_settings_24"-->
+<!--        app:showAsAction="never"-->
+
+    <item
+        android:id="@+id/fourth"
+        android:title="Logout"
+        android:icon="@drawable/baseline_logout_24"
+        app:showAsAction="always"
+        />
+</menu>
