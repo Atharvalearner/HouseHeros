@@ -19,14 +19,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -37,7 +32,7 @@ import com.google.firebase.storage.UploadTask;
 
 import java.util.ArrayList;
 
-public class Worker extends AppCompatActivity {
+public class Worker_Set_profile extends AppCompatActivity {
     EditText name,occupation,address,contactno,email,workexp,officeaddress;
     Button save;
     ImageView testimonals,profileImage;
@@ -56,7 +51,7 @@ public class Worker extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.worker);
+        setContentView(R.layout.worker_set_profil);
 
         profileImage = findViewById(R.id.profile_image);
         name = findViewById(R.id.worker_name);
@@ -105,7 +100,7 @@ public class Worker extends AppCompatActivity {
             public boolean onMenuItemClick(MenuItem item) {
                 int menuId = item.getItemId();
                 if (menuId == R.id.fourth){
-                    AlertDialog.Builder builder = new AlertDialog.Builder(Worker.this);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(Worker_Set_profile.this);
                     builder.setTitle("Alert for Logout");
                     builder.setMessage("You really want to logout");
                     builder.setIcon(R.drawable.logo_bw);
@@ -113,15 +108,15 @@ public class Worker extends AppCompatActivity {
                     builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            Intent intent = new Intent(Worker.this,MainActivity.class);
+                            Intent intent = new Intent(Worker_Set_profile.this,MainActivity.class);
                             startActivity(intent);
-                            Toast.makeText(Worker.this, "Logout Successfull", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Worker_Set_profile.this, "Logout Successfull", Toast.LENGTH_SHORT).show();
                         }
                     });
                     builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            Toast.makeText(Worker.this, "Logout Cancel", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Worker_Set_profile.this, "Logout Cancel", Toast.LENGTH_SHORT).show();
                         }
                     });
                     AlertDialog alertDialog = builder.create();
@@ -190,8 +185,8 @@ public class Worker extends AppCompatActivity {
                                         firebaseDatabase.getReference().child("Worker").child(id).setValue(uploadData1).addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void unused) {
-                                                Toast.makeText(Worker.this, "Profile saved successfully", Toast.LENGTH_SHORT).show();
-                                                Intent intent1 = new Intent(Worker.this, Worker_Profile_View.class);
+                                                Toast.makeText(Worker_Set_profile.this, "Profile saved successfully", Toast.LENGTH_SHORT).show();
+                                                Intent intent1 = new Intent(Worker_Set_profile.this, Worker_Profile_Recycler_View.class);
                                                 startActivity(intent1);
                                             }
                                         });

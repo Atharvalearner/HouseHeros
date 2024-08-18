@@ -1,12 +1,9 @@
 package com.example.constructionmodel;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,20 +16,20 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Worker_Profile_View extends AppCompatActivity {
+public class Worker_Profile_Recycler_View extends AppCompatActivity {
     FirebaseDatabase mDatabase;
     FirebaseStorage mStorage;
     DatabaseReference mRef;
     List<uploadData> dataList;
     TextView vname,voccupation,vcontact,vaddress,vemail,vexp,vofficeaddress;
     ImageView vprofile,vtestimonal;
-    ArrayList<Worker> workerid;
+    ArrayList<Worker_Set_profile> workerid;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_worker_profile_view);
+        setContentView(R.layout.activity_worker_profile_view_after_recycler_onclick);
 
         dataList = new ArrayList<uploadData>();
         mDatabase = FirebaseDatabase.getInstance();

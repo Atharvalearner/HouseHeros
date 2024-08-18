@@ -15,12 +15,15 @@
         android:theme="@style/Theme.ConstructionModel"
         tools:targetApi="31">
         <activity
-            android:name=".Worker_Profile_View"
+            android:name=".ReviewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Worker_Profile_Recycler_View"
             android:exported="false" />
         <activity
             android:name=".View_Dashboard"
             android:exported="true"
-            android:parentActivityName=".Profile_Dashboard"/>
+            android:parentActivityName=".Profile_Dashboard" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -31,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Worker"
+            android:name=".Worker_Set_profile"
             android:exported="false" />
         <activity
             android:name=".Profile_Dashboard"

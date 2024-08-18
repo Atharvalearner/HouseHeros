@@ -92,7 +92,7 @@ public class LoginTabFragment extends Fragment {
 //                                        Intent intent=new Intent(getActivity(),Worker.class);
 //                                        startActivity(intent);
 //                                    }
-                                Intent intent=new Intent(getActivity(),Worker.class);
+                                Intent intent=new Intent(getActivity(), Worker_Set_profile.class);
                                 startActivity(intent);
                                 Toast.makeText(getActivity(), "Login Successfully...", Toast.LENGTH_SHORT).show();
                                 progressDoalog.dismiss();

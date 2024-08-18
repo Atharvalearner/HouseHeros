@@ -22,7 +22,7 @@
                 android:layout_height="150dp"
                 android:scaleType="fitXY"
                 android:padding="5dp"
-                app:srcCompat="@drawable/baseline_plumber_24"
+                app:srcCompat="@drawable/baseline_plumbing_24"
                 />
 
             <TextView
